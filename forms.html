@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+</head>
+<body>
+    <h1> Form filling</h1>
+    <form action="/path.php">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="Enter your Mobile number" required>
+        </div>
+
+        <div>
+            <label for="email"> Email</label>
+            <input id="email" type="email" placeholder="Enter your mail id" required>
+        </div>
+
+        <div>
+            <label for="password"> Password</label>
+            <input id="password" type="password" placeholder="Enter password" required>
+        </div>
+
+        <div>
+            <label for="Dob"> Date of Birth</label>
+            <input id="Dob" type="date" required>
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value=""desabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option Valu="Trans"> Transgender</option>
+            </select>
+        </div>
+
+        <!-- radio buttons for subscription plans -->
+         <div>
+            <input id="basic" type="radio" name="subscription" value="basic">
+            <label for="basic">Basic</label>
+            <!-- input id aur label for ka name isliye same hai kyuki agar hum uske name pe bhi click karenge to vo click ho jayega -->
+            <input id="premium" type="radio" name="subscription" value="premium">
+            <label for="premium"> Premium</label>
+            <!-- sabke name isliye same rakhe hai taki at the time main koi ek radio option hi select kar paun -->
+         </div>
+
+         <!-- checkbox -->
+          <div>
+            <input id="conditions" type="checkbox" required>
+            <label for="conditions"> I agree for the above permission</label>
+          </div>
+
+          <!-- textarea for comments -->
+           <div>
+                <label for="comments"> Comments</label>
+                <textarea id ="comments" placeholder="Enter your comments" rows="3"></textarea>
+           </div>
+
+           <!-- submit button -->
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+
+
+          
+    </form>
+
+</body>
+</html>
